@@ -154,6 +154,8 @@ COPY public.actors (actor_id, name, date_of_birth) FROM stdin;
 1	Morgan Freeman	1937-06-01
 2	Marlon Brando	1924-04-03
 3	Christian Bale	1974-01-30
+4	Al Pacino	1940-04-25
+5	Robert De Niro	1943-08-17
 \.
 
 
@@ -164,7 +166,9 @@ COPY public.actors (actor_id, name, date_of_birth) FROM stdin;
 COPY public.directors (director_id, name, date_of_birth) FROM stdin;
 1	Frank Darabont	1959-01-28
 3	Christopher Nolan	1970-07-30
-2	Francis Ford Coppola	1940-04-07
+4	Quentin Tarantino	1963-03-27
+2	Francis Ford Coppola	1939-04-07
+5	Martin Scorsese	1942-11-17
 \.
 
 
@@ -176,6 +180,8 @@ COPY public.movies (movie_id, title, year_of_release) FROM stdin;
 1	The Shawshank Redemption	1994
 2	The Godfather	1972
 3	The Dark Knight	2008
+4	Heat	1995
+5	Taxi Driver	1976
 \.
 
 
@@ -183,21 +189,21 @@ COPY public.movies (movie_id, title, year_of_release) FROM stdin;
 -- Name: actors_actor_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.actors_actor_id_seq', 3, true);
+SELECT pg_catalog.setval('public.actors_actor_id_seq', 5, true);
 
 
 --
 -- Name: directors_director_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.directors_director_id_seq', 3, true);
+SELECT pg_catalog.setval('public.directors_director_id_seq', 5, true);
 
 
 --
 -- Name: movies_movie_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.movies_movie_id_seq', 3, true);
+SELECT pg_catalog.setval('public.movies_movie_id_seq', 5, true);
 
 
 --
